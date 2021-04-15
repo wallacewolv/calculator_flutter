@@ -115,7 +115,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "7";
+                        }
                         //print("7");
                       });
                     },
@@ -126,7 +131,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "8";
+                        }
                         //print("8");
                       });
                     },
@@ -137,7 +147,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "9";
+                        }
                         //print("9");
                       });
                     },
@@ -163,7 +178,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "4";
+                        }
                         //print("4");
                       });
                     },
@@ -174,7 +194,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "5";
+                        }
                         //print("5");
                       });
                     },
@@ -185,7 +210,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "6";
+                        }
                         //print("6");
                       });
                     },
@@ -211,7 +241,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "1";
+                        }
                         //print("1");
                       });
                     },
@@ -222,7 +257,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "2";
+                        }
                         //print("2");
                       });
                     },
@@ -233,7 +273,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length == 1 && result == "0") {
+                          result = "";
+                        }
+                        if (result.length < 10) {
+                          result += "3";
+                        }
                         //print("3");
                       });
                     },
@@ -253,30 +298,35 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Row(
                 children: [
-                  Button(
-                    key: UniqueKey(),
-                    text: "0",
-                    color: Colors.black54,
-                    functionButton: () {
-                      setState(() {
-                        this.result = "0";
-                        //print("0");
-                      });
-                    },
-                  ),
                   SizedBox(
                     width: 160,
                     child: Button(
                       key: UniqueKey(),
-                      text: ",",
+                      text: "0",
                       color: Colors.black54,
                       functionButton: () {
                         setState(() {
-                          this.result = "0";
-                          //print(",");
+                          if (result.length == 1 && result == "0") {
+                            result = "";
+                          }
+                          if (result.length < 10) {
+                            result += "0";
+                          }
+                          //print("0");
                         });
                       },
                     ),
+                  ),
+                  Button(
+                    key: UniqueKey(),
+                    text: ",",
+                    color: Colors.black54,
+                    functionButton: () {
+                      setState(() {
+                        this.result = "0";
+                        //print(",");
+                      });
+                    },
                   ),
                   Button(
                     key: UniqueKey(),
