@@ -78,7 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (result.length < 10) {
+                          if (result.contains('-')) {
+                            result = result.replaceAll("-", "");
+                          } else {
+                            result = "-$result";
+                          }
+                        }
                         //print("+-");
                       });
                     },
@@ -323,7 +329,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black54,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        if (!result.contains(".") && result.length < 10) {
+                          result += ".";
+                        }
                         //print(",");
                       });
                     },
