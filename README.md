@@ -1,16 +1,8 @@
-<h1 align="center"> 
-  <img height="80" src=".assets/images/calculator_flutter.gif" alt="Calculator_flutter" />
-</h1>
-
 <h1 align="center">Calculator Flutter Desktop</h1>
 
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Calculator Flutter Desktop 🚀 Under Fiished...  🚧
-</h4> 
-
-<hr> -->
+<h1 align="center"> 
+  <img height="80" src="./assets/images/calculator_flutter.gif" alt="Calculator_flutter" />
+</h1>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
