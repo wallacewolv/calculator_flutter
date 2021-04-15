@@ -30,6 +30,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var result = "0";
   var clearResult = false;
+  var operatorFunction = "";
+  var firstOperand = "0";
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +116,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.blue,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        operatorFunction = "/";
+                        firstOperand = result;
+                        result = "0";
                         //print("/");
                       });
                     },
@@ -189,7 +193,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.blue,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        operatorFunction = "x";
+                        firstOperand = result;
+                        result = "0";
                         //print("x");
                       });
                     },
@@ -264,7 +270,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.blue,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        operatorFunction = "-";
+                        firstOperand = result;
+                        result = "0";
                         //print("-");
                       });
                     },
@@ -339,7 +347,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.blue,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        operatorFunction = "+";
+                        firstOperand = result;
+                        result = "0";
                         //print("+");
                       });
                     },
@@ -356,6 +366,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.cyan,
                       functionButton: () {
                         setState(() {
+                          if (clearResult) {
+                            result = "0";
+                            clearResult = false;
+                          }
                           if (result.length == 1 && result == "0") {
                             result = "";
                           }
@@ -386,7 +400,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.blue,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        var num1 = double.parse(firstOperand);
+                        var num2 = double.parse(result);
+                        switch (operatorFunction) {
+                          case "+":
+                            result = (num1 + num2).toString();
+                            break;
+                          case "-":
+                            result = (num1 - num2).toString();
+                            break;
+                          case "x":
+                            result = (num1 * num2).toString();
+                            break;
+                          case "/":
+                            result = (num1 / num2).toString();
+                            break;
+                          default:
+                        }
+                        operatorFunction = "";
+                        firstOperand = "0";
+                        clearResult = true;
                         //print("=");
                       });
                     },

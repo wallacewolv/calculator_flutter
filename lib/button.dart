@@ -39,14 +39,14 @@ class _ButtonState extends State<Button> {
       child: Text(
         text,
         style: TextStyle(
-          fontSize: 23,
+          fontSize: 28,
           fontWeight: FontWeight.bold,
         ),
       ),
       onPressed: functionButton,
       height: 70,
       color: color,
-      textColor: Colors.white,
+      textColor: Colors.black,
     );
   }
 }
