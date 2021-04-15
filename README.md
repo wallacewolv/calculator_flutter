@@ -1,7 +1,7 @@
 <h1 align="center">Calculator Flutter Desktop</h1>
 
 <h1 align="center"> 
-  <img height="80" src="./assets/images/calculator_flutter.gif" alt="Calculator_flutter" />
+  <img height="320" src="./assets/images/calculator_flutter.gif" alt="Calculator_flutter" />
 </h1>
 
 <p align="center">
