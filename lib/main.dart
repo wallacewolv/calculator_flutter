@@ -29,9 +29,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var result = "0";
+  var clearResult = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: GestureDetector(
         onTapDown: (_) {
           setState(() {});
@@ -54,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 50,
                         color: Colors.white,
                         fontFamily: 'Arial',
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   )
@@ -64,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "AC",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
                         this.result = "0";
@@ -75,9 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "+-",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (result.length == 1 && result == "0") {
+                          return;
+                        }
                         if (result.length < 10) {
                           if (result.contains('-')) {
                             result = result.replaceAll("-", "");
@@ -92,10 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "%",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
-                        this.result = "0";
+                        result = (double.parse(result) / 100).toString();
+                        clearResult = true;
                         //print("%");
                       });
                     },
@@ -103,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "/",
-                    color: Colors.orange,
+                    color: Colors.blue,
                     functionButton: () {
                       setState(() {
                         this.result = "0";
@@ -118,9 +126,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "7",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -134,9 +146,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "8",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -150,9 +166,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "9",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -166,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "x",
-                    color: Colors.orange,
+                    color: Colors.blue,
                     functionButton: () {
                       setState(() {
                         this.result = "0";
@@ -181,9 +201,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "4",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -197,9 +221,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "5",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -213,9 +241,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "6",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -229,7 +261,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "-",
-                    color: Colors.orange,
+                    color: Colors.blue,
                     functionButton: () {
                       setState(() {
                         this.result = "0";
@@ -244,9 +276,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "1",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -260,9 +296,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "2",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -276,9 +316,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "3",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
+                        if (clearResult) {
+                          result = "0";
+                          clearResult = false;
+                        }
                         if (result.length == 1 && result == "0") {
                           result = "";
                         }
@@ -292,7 +336,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "+",
-                    color: Colors.orange,
+                    color: Colors.blue,
                     functionButton: () {
                       setState(() {
                         this.result = "0";
@@ -309,7 +353,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Button(
                       key: UniqueKey(),
                       text: "0",
-                      color: Colors.black54,
+                      color: Colors.cyan,
                       functionButton: () {
                         setState(() {
                           if (result.length == 1 && result == "0") {
@@ -326,7 +370,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: ",",
-                    color: Colors.black54,
+                    color: Colors.cyan,
                     functionButton: () {
                       setState(() {
                         if (!result.contains(".") && result.length < 10) {
@@ -339,7 +383,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Button(
                     key: UniqueKey(),
                     text: "=",
-                    color: Colors.orange,
+                    color: Colors.blue,
                     functionButton: () {
                       setState(() {
                         this.result = "0";

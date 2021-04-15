@@ -33,13 +33,14 @@ class _ButtonState extends State<Button> {
   Widget build(BuildContext context) {
     return FlatButton(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.zero,
-        side: BorderSide(color: Colors.black54),
+        borderRadius: BorderRadius.circular(10),
+        side: BorderSide(color: Colors.black),
       ),
       child: Text(
         text,
         style: TextStyle(
           fontSize: 23,
+          fontWeight: FontWeight.bold,
         ),
       ),
       onPressed: functionButton,
