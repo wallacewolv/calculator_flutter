@@ -29,7 +29,7 @@ Application developed with Flutter 2.0 from desktop Windows, Linux and MacOS.
 :heavy_check_mark: Add + - function\
 :heavy_check_mark: Display wipe function (AC)\
 :heavy_check_mark: Percentage function\
-:heavy_check_mark: Add function. (,)\
+:heavy_check_mark: Add function. (,)
 
 
 
